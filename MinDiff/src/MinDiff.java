@@ -18,26 +18,26 @@ Return the INDEX of the stone that you should
 stand by in a new function, minDiffStone(). 
 */
 public class MinDiff {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        int[] intArray1 = { 1, 34, 4, 6, 14, 2 };
+        int ans1 = minDiff(intArray1); // Should be 2 as |4 - 6| = 2;
+        System.out.println("Min Diff of {1, 34, 4, 6, 14, 2} is: " + ans1);
 
-        int arr[] = new int[] { 1, 34, 4, 6, 14, 2 };
-        // Function call
-        System.out.println("Minimum difference is " + findMinDiff(arr, arr.length));
+        int[] intArray2 = { 23, 15, 46, 75, 6, 74, 100 };
+        int ans2 = minDiff(intArray2); // Should be 8 as |23 - 15| = 8;
+        System.out.println("Min Diff of {23, 15, 46, 75, 6, 74, 100} is: " + ans2);
+
     }
-     // Returns minimum difference between any pair
-     static int findMinDiff(int[] arr, int n) {
-         // Sort array in non-decreasing order
-         Arrays.sort(arr);
-  
-         // Initialize difference as infinite
-         int diff = Integer.MAX_VALUE;
-  
-         // Find the min diff by comparing neighboring pairs in sorted array
-         for (int i = 0; i < n - 1; i++)
-             if (arr[i + 1] - arr[i] < diff)
-                 diff = arr[i + 1] - arr[i];
-  
-         // Return min diff
-         return diff;
+    public static int minDiff(int[] stones) {
+        int minDiff = Integer.MAX_VALUE; // make it the biggest integer
+        return 0;
+        // Initialize difference as infinite        
+
+        // Find the min diff by comparing neighboring pairs in sorted array
+     for (int i = 0; i < stones.length - 1; i++)
+                if (Math.abs(stones[i] - stones[i+1])
+ 
+        // Return min diff
+        return minDiff;
     }
 }
