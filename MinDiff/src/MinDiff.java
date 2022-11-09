@@ -31,9 +31,8 @@ public class MinDiff {
     public static int minDiff(int[] stones) {
         int minDiff = Integer.MAX_VALUE; // make it the biggest integer
         return 0;
-        // Initialize difference as infinite        
-
-        // Find the min diff by comparing neighboring pairs in sorted array
+        // Initialize difference       
+        // Find the min diff by comparing neighboring pairs in array
      for (int i = 0; i < stones.length - 1; i++)
                 if (Math.abs(stones[i] - stones[i+1])
  
